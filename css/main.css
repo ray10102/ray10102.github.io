@@ -1,0 +1,376 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+  background-image: url("../img/bg.png");
+  background-color: #222;
+  min-height: 100px;
+}
+
+footer {
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  padding: 1%;
+}
+
+#fixed-header {
+    position: fixed;
+    z-index: 100;
+}
+
+#fixed-sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: calc(100vh - 87px);
+    height: -o-calc(100vh - 87px); /* opera */
+    height: -webkit-calc(100vh - 87px); /* google, safari */
+    height: -moz-calc(100vh - 87px); /* firefox */
+    margin-top: 87px;
+    padding: 3% 3% 0% 3%;
+    background-color: rgba(255,255,255,.1);
+    color: white;
+    width: 30%;
+    overflow-y: auto;
+}
+
+#fixed-sidebar:hover {
+  overflow-y: auto;
+}
+
+.navbar-spacer {
+  width: 100%;
+  height: 87px;
+  background-color: transparent;
+}
+
+#fixed-sidebar-main-content {
+    margin-left: 30%;
+    width: 70%;
+}
+
+#main-content {
+  padding: 5%;
+  height: 100%;
+}
+
+.hbar {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: block;
+  z-index: 100;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navbar */
+
+.myNav {
+  width: 100%;
+}
+
+.nav {
+  background: black; /* For browsers that do not support gradients */
+  background-image: url("../img/bg.png");
+}
+
+#active {
+  border: 2px solid white;
+}
+
+#active:hover {
+  border-color: white !important;
+  transition: border-color .3s;
+}
+
+#active > a {
+  color: white;
+}
+
+.navbar-nav {
+  background: none;
+  height: 35px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 2%;
+  background-color: transparent;
+}
+
+.navbar-nav:hover #active {
+  border-color: transparent;
+  transition: border-color .3s;
+}
+
+.navbar-nav > li {
+  border: 2px solid transparent;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.navbar-nav > li:hover {
+  border-color: white;
+  transition: border-color .3s;
+}
+
+
+.navbar-nav > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 25px;
+  padding-left: 25px;
+  white-space: nowrap;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: rgb(200,200,200)
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.navbar-header {
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+}
+
+
+/* Jumbotron */
+
+/* Main Jumbo */
+
+.jumbo {
+  height: calc(100vh - 87px);
+  height: -o-calc(100vh - 87px); /* opera */
+  height: -webkit-calc(100vh - 87px); /* google, safari */
+  height: -moz-calc(100vh - 87px); /* firefox */
+
+  width: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+
+.jumbo-text {
+  font-size: 75px;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 75px;
+  white-space: pre;
+  color: white;
+}
+
+.jumbo-content {
+  width: 100%;
+  margin-left: 10%;
+  margin-top:20%;
+  margin-bottom:20%;
+}
+
+.jumbo-block {
+  height: 75px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Jumbo with navs */
+
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.jumbo-title {
+  width:100%; 
+  align-items: flex-end;
+  color: white;
+  padding: 1%;
+}
+
+.jumbo-title > h1 {
+  font-size: 70px;
+}
+
+
+.jumbo-nav {
+  display:inline-block;
+  text-decoration:none;
+  background-color:#222222;
+  color:white;
+  cursor:pointer;
+  font-family: 'Raleway', Helvetica,Arial,sans-serif;
+  font-size:20px;
+  font-weight: normal;
+  line-height:50px;
+  text-align:center;
+  margin:10px;
+  height:50px;
+  padding:0px 33px;
+  border-radius: 25px;
+  max-width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:grayscale;
+  border: 2px solid transparent;
+
+  transition: border-color .3s, border-radius .3s;
+}
+
+.jumbo-nav:hover {
+  border-radius: 0px;
+  border-color: white;
+  text-decoration: none;
+  background-color:#222222;
+  color:white;
+}
+
+.jumbo-nav:active {
+  text-decoration: none;
+  color: white;
+}
+
+.jumbo-nav:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.jumbo-nav:focus {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Scroll title */
+
+.scroll-mask {
+  font-weight: bold;
+  width: 65%;
+  overflow: hidden;
+  min-width: 839px;
+}
+
+#scroll-contents {
+  width: 100%;
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  left: 0;
+  top: 0px;
+  animation-name: move;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  -webkit-animation: move 17s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+}
+
+.scroll-text {
+  display: block;
+  height: 75px;
+}
+
+.scroll-text > a {
+  color: rgb(0, 245, 255);
+}
+
+@keyframes move {
+0%  { top: 0px; }
+5% { top: -75px; }
+10% { top: -150px; }
+15% { top: -225px; }
+20% { top: -300px; }
+22.5% { top: -375px; }
+25% { top: -450px; }
+27.5% { top: -525px; }
+30% { top: -600px; }
+31.25% { top: -675px; }
+32.5% { top: -750px; }
+33.75% { top: -825px; }
+35% { top: -900px; }
+36.25% { top: -975px; }
+37.5% { top: -1050px; }
+38.75% { top: -1125px; }
+40% { top: -1200px; }
+85% { top: -1200px; }
+100%{ top: 0px; }
+}
+
+/* Profile Link  */
+
+#profile-link:link {
+  text-decoration: none;
+}
+
+a > #profile-link:visited {
+  text-decoration: none;
+}
+
+a > #profile-link:hover {
+  text-decoration: none;
+  text-shadow: 0 0 15px white;
+  transition: text-shadow .75s;
+}
+
+#profile-link:after {
+  content: "  \21e8";;
+  color: transparent;
+}
+
+#profile-link:hover:after {
+  color: inherit;
+  letter-spacing: 20px;
+  transition: color .75s, letter-spacing .75s;
+}
+
+/* Centering hack for jumbo scroll */
+
+#centering-hack {
+   display: inline-block;
+   align-items: left;
+}
+
+@media only screen and (min-width: 1310px) {
+  #centering-hack {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*
+@media (max-width: 690px) {
+  
+  .jumbo-text {
+    font-size: 30px !important;
+  }   
+}
+*/
+/* class will have these properties when screen is bigger than tablet 
+@media (min-width: 768px) {
+
+}
+
+
+@media (max-width: 980px) {
+  
+  .jumbo-text {
+    font-size: 50px;
+  }
+}
+*/
