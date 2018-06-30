@@ -10,6 +10,7 @@
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/flip.css">
 </head>
 
 <header>
@@ -40,7 +41,6 @@
 
 
 <body>
-
   <div class="jumbo center">
     <div class="center jumbo-title">
       <h1>Here's some of my work.</h1>
@@ -59,10 +59,20 @@
   </div>
 
   <div class="portfolio"> 
-      <div class="item-container regame" id="regame">
-        <div class="portfolio-item">
+    <div class="item-container regame flip-container" id="regame" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="portfolio-item">
+          </div>
+        </div>
+        <div class="back">
+          <div class="item-container hackathon">
+            <div class="portfolio-item">
+            </div>
+          </div>
         </div>
       </div>
+    </div>
       <div class="item-container hackathon">
         <div class="portfolio-item">
         </div>
